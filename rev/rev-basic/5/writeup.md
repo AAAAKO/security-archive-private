@@ -14,8 +14,8 @@
 ## 🧠 분석 / Analysis
 - 실행 포맷 / Executable format: Portable executable for AMD64 (PE)
 
-- 주요 함수 및 흐름 / Key functions & flow
-![의사 코드 / Pseudocode](img/pseudocode.jpg)
+- 주요 함수 및 흐름 / Key functions & flow  
+![의사 코드 / Pseudocode](img/pseudocode.jpg)  
 1. 문자를 입력 / Input string
 2. 입력값 검증 / Verify input data
 3. 분기별 출력 / Output divergence
