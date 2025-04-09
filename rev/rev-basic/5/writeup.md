@@ -31,21 +31,24 @@ X
    (EN) After decompiling the assembly code into pseudocode, I analyzed it
 
    ![의사 코드 / Pseudocode](img/pseudocode2.jpg)
+   
    (KR) 의사코드 중 입력값을 검증하는 부분을 알아야 플래그를 알아낼 수 있기에
       가장 먼저 보았다.
    (EN) I focused first on the input validation part of the pseudocode since understanding it was key to retrieving the flag.
    
-2. (KR) 어셈블리와 비교하여 분석  
+3. (KR) 어셈블리와 비교하여 분석  
    (EN) Analysis and comparison of pseudocode and assembly
 
    ![어셈블리 코드 / Assembly code](img/assembly.jpg)
+   
    (KR) 보아하니 별 다른 문제는 없는 모양
    (EN) From the looks of it, there didn’t seem to be any unexpected behavior or hidden logic.
 
-3. (KR) 주요 루틴 역추적 및 조건 해제  
+5. (KR) 주요 루틴 역추적 및 조건 해제  
    (EN) Trace key routines and bypass conditions
 
    ![생각 1 / Idea 1](img/thinking1.jpg)
+   
    (KR) 이런 느낌으로 입력값을 검증하는구나
    (EN) It became clear that the program validates the input using a specific pattern like this.
 
@@ -55,7 +58,7 @@ X
    (KR) 그렇다면 그 값을 기반으로 코드를 짜보자
    (EN) So I wrote code to reverse the logic based on that assumption.
 
-4. (KR) 키/플래그 추출  
+7. (KR) 키/플래그 추출  
    (EN) Extract key/flag
 
 ```
