@@ -15,7 +15,7 @@
 - 실행 포맷 / Executable format: Portable executable for AMD64 (PE)
 
 - 주요 함수 및 흐름 / Key functions & flow
-![의사 코드 / Pseudocode](/img/pseudocode.jpg)
+![의사 코드 / Pseudocode](img/pseudocode.jpg)
 1. 문자를 입력 / Input string
 2. 입력값 검증 / Verify input data
 3. 분기별 출력 / Output divergence
@@ -30,7 +30,7 @@ X
 1. (KR) 의사코드로 디컴파일 후 분석  
    (EN) After decompiling the assembly code into pseudocode, I analyzed it
 
-   ![의사 코드 / Pseudocode](/img/pseudocode2.jpg)
+   ![의사 코드 / Pseudocode](img/pseudocode2.jpg)
    (KR) 의사코드 중 입력값을 검증하는 부분을 알아야 플래그를 알아낼 수 있기에
       가장 먼저 보았다.
    (EN) I focused first on the input validation part of the pseudocode since understanding it was key to retrieving the flag.
@@ -38,14 +38,14 @@ X
 2. (KR) 어셈블리와 비교하여 분석  
    (EN) Analysis and comparison of pseudocode and assembly
 
-   ![어셈블리 코드 / Assembly code](/img/assembly.jpg)
+   ![어셈블리 코드 / Assembly code](img/assembly.jpg)
    (KR) 보아하니 별 다른 문제는 없는 모양
    (EN) From the looks of it, there didn’t seem to be any unexpected behavior or hidden logic.
 
 3. (KR) 주요 루틴 역추적 및 조건 해제  
    (EN) Trace key routines and bypass conditions
 
-   ![생각 1 / Idea 1](/img/thinking1.jpg)
+   ![생각 1 / Idea 1](img/thinking1.jpg)
    (KR) 이런 느낌으로 입력값을 검증하는구나
    (EN) It became clear that the program validates the input using a specific pattern like this.
 
@@ -79,7 +79,7 @@ print("DH{"+flag+"}")
 ```
 
 ## ✅ 결과 / Result
-- ![결과창 / Result](/img/result.jpg)
+- ![결과창 / Result](img/result.jpg)
 
 ## 📝 기타 메모 / Notes
 - (KR) 분석 중 삽질하거나 기록해두고 싶은 것들  
