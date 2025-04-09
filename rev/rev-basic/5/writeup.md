@@ -33,7 +33,7 @@ X
    ![의사 코드 / Pseudocode](img/pseudocode2.jpg)
    
    (KR) 의사코드 중 입력값을 검증하는 부분을 알아야 플래그를 알아낼 수 있기에
-      가장 먼저 보았다.
+      가장 먼저 보았다.  
    (EN) I focused first on the input validation part of the pseudocode since understanding it was key to retrieving the flag.
    
 3. (KR) 어셈블리와 비교하여 분석  
@@ -41,7 +41,7 @@ X
 
    ![어셈블리 코드 / Assembly code](img/assembly.jpg)
    
-   (KR) 보아하니 별 다른 문제는 없는 모양
+   (KR) 보아하니 별 다른 문제는 없는 모양  
    (EN) From the looks of it, there didn’t seem to be any unexpected behavior or hidden logic.
 
 5. (KR) 주요 루틴 역추적 및 조건 해제  
@@ -49,13 +49,13 @@ X
 
    ![생각 1 / Idea 1](img/thinking1.jpg)
    
-   (KR) 이런 느낌으로 입력값을 검증하는구나
+   (KR) 이런 느낌으로 입력값을 검증하는구나  
    (EN) It became clear that the program validates the input using a specific pattern like this.
 
-   (KR) 그런데 이 느낌으로 가면 뒤에가 0이니까 특정 값을 주는게 아닐까?
+   (KR) 그런데 이 느낌으로 가면 뒤에가 0이니까 특정 값을 주는게 아닐까?  
    (EN) Given that the comparison ends with 0, I assumed the program might rely on a specific value at the end.
 
-   (KR) 그렇다면 그 값을 기반으로 코드를 짜보자
+   (KR) 그렇다면 그 값을 기반으로 코드를 짜보자  
    (EN) So I wrote code to reverse the logic based on that assumption.
 
 7. (KR) 키/플래그 추출  
@@ -81,12 +81,12 @@ flag = ''.join(chr(x) for x in a[:23])
 print("DH{"+flag+"}")
 ```
 
-## ✅ 결과 / Result
+## ✅ 결과 / Result  
 - ![결과창 / Result](img/result.jpg)
 
 ## 📝 기타 메모 / Notes
 - (KR) 분석 중 삽질하거나 기록해두고 싶은 것들  
 - (EN) Extra notes, pitfalls, or things to remember later
 
-1. (KR)계산식 분석 중 너무 많은 삽질을 해버림
+1. (KR)계산식 분석 중 너무 많은 삽질을 해버림  
    (EN) Spent too much time analyzing the formula due to misinterpretation of the decryption loop.
