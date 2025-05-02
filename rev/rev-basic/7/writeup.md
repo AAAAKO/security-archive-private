@@ -51,9 +51,9 @@ X
    (EN) From the looks of it, there didn’t seem to be any unexpected behavior or hidden logic.  
 
    (KR) 그래서 그냥 역연산을 하기로 마음을 먹었다. 의사코드 내용이랑 어셈블리랑 큰 차이가 없는것도 같고  
-        0~7번 회전 한다는것도 아마 16진수 문자이기에 8bit를 사용하니까 7번으로 제한을 둔거 같았다.  
+        0\~7번 회전 한다는것도 아마 16진수 문자이기에 8bit를 사용하니까 7번으로 제한을 둔거 같았다.  
         xor 연산은 역연산 할떄 xor 한번 해주면 되는거고   
-        회전 시프트를 좌측으로 0~7번 시키는거니까 나는 우측으로 똑같이 돌려주면 원하는 결과값을 찾을 수 있으리라.  
+        회전 시프트를 좌측으로 0\~7번 시키는거니까 나는 우측으로 똑같이 돌려주면 원하는 결과값을 찾을 수 있으리라.  
    (EN) So I decided to proceed with reversing it directly, since the pseudocode and assembly didn’t seem significantly different.  
     The rotation range of 0 to 7 likely comes from the fact that hexadecimal characters use 8 bits, limiting the shift to 7 positions.  
     As for the XOR operation, reversing it just requires applying XOR once again.  
