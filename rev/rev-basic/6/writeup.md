@@ -37,7 +37,7 @@ X
 2. (KR) 입력값 검증 테이블 분석  
    (EN) Input Validation Table Analysis  
 
-   ![의사 코드 / Pseudocode](img/hex_view.jpg)  
+   ![헥스 뷰 / Hex view](img/hex_view.jpg)  
 
    (KR) 테이블 표를 보고 기겁을 했으나 결국 byte_140003000이랑
    byte_140003020 이랑 같은 부분을 찾으면 되겠구나 싶었다.  
@@ -161,6 +161,7 @@ for i in range(0,17):
     
 print("DH{"+ ''.join(result) +"}")
 ```
+
     (KR) 의사코드에서는 배열 인자까지 조건문에 더했는데 어셈블리에는 그런 항목이 없었다... 어셈블리를 대충 훑어본 나의 잘못으로 삽질을 하게 되었던 것    
     (EN) It was my mistake to skim through the assembly, which led me to waste time.  
 
