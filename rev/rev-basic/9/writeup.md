@@ -1,4 +1,4 @@
-# [rev-basic-07]
+# [rev-basic-09]  
 
 ## 🔍 문제 설명 / Problem Description
 - 문제 출처 / Source: https://dreamhack.io/wargame/challenges/23
