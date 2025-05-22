@@ -15,11 +15,11 @@
 - 실행 포맷 / Executable format: Portable executable for AMD64 (PE)
 
 - 주요 함수 및 흐름 / Key functions & flow  
-1. **Main Function  
+1. **Main Function**  
 ![의사 코드 / Pseudocode](img/pseudocode_main.jpg)  
    여타 다른 rev-basic 문제와 같이 특별한 부분이 없는 입력 후 분기에 따라 출력 하는 구조이다.  
   
-2. **Sub_7FF603D31000  
+2. **Sub_7FF603D31000**  
 ![의사 코드 / Pseudocode](img/pseudocode1.jpg)  
    입력값의 길이가 7 , 15 , 23 ... 이 아니라면 조건식이 양수가 되어  
    0을 반환하고 종료 한다.  
@@ -32,7 +32,7 @@
    일치한다면 0을 반환하여 correct 조건 분기를 true로 만든다.   
    (unk_7FF603D34000이 중요 테이블이라고 생각된다.)  
   
-3. **Sub_7FF603D310A0 (Encrypt Logic)
+3. **Sub_7FF603D310A0 (Encrypt Logic)**  
 ![의사 코드 / Pseudocode](img/pseudocode2.jpg)  
    qmemcpy에서 v5로 옮겨가는 문자열 명은 "I_am_KEY" 인가 그랬을것이다.  
    맞는지 확인해보기 위해 실행을 했더니 바뀌어버렸다..  
@@ -47,18 +47,18 @@
 
 
 ## 🧠 어셈블리 분석 / Assembly Analysis  
-1. **Main  
+1. **Main**  
 ![어셈블리 / Assembly](img/assembly_analysis1.jpg)  
    메인인데 cdq를 처음 본것 말고는 따로 특별한 부분은 없었따.  
    의사코드와 흐름 자체가 동일한 평범한 케이스  
 
-2. **Sub_7FF603D310A0  
+2. **Sub_7FF603D310A0**  
 ![어셈블리 / Assembly](img/assembly_analysis2.jpg)  
    여기서부터 슬슬 값 추적하는게 어려웠다  
    원래 타 문제에서는 security_cookie 저게 메인에 붙어있는 공통된 검증  과정인데 logic에 포함되니까 관련 어셈블리까지 따라 붙으면서 보기가 좀  어려웠었다.  
    조금 헤맸지만 그래도 열심히 주석으로 기록하면서 따라가는 모습  
 
-3. **Sub_7FF603D3110D (Encrypt Logic)  
+3. **Sub_7FF603D3110D (Encrypt Logic)**   
 ![어셈블리 / Assembly](img/assembly_analysis3.jpg)  
    문제는 여기였다.  
    의사코드에서 확인했던 result 변수때문에 문제 의도인지는 모르겠으나  
@@ -67,20 +67,20 @@
    그리고 이것도 이거고 더 큰 산이 아직 하나 남아있었다  
 
 ## 🔓 풀이 과정 / Solution Steps  
-1. *입력값 추론  
+1. **입력값 추론**   
    관련 암호화 테이블들의 내용들을 따서 전부 헥스뷰로 따서 텍스트화 시켰고  
    옮겨서 역연산을 시도했었다. 문제에서는 단순히 ror로 우측  
    회전시프트만 하길래 좌측 회전시프트로 바꾸고 반복문을  
    끝에서부터 감소하는 형태로 돌렸으나 틀렸었다.    
 
-2. *실패 이유
+2. **실패 이유**  
    이유가 뭔가하니 역으로 돌아가는 시점에서 8개로 끊는 단위의 끝 부분은  
    초기화가 되지않아 쓰레기 값이 복호화되어 안 됐었다.  
    그래서 정말 역연산 하는데에 시간을 많이 썼다.  
    이전과 같이 input * a mod b 마냥 다른 알고리즘을 추론하는게 아니라  
    순수하게 값 하나하나를 집어넣어서 움직임을 보거나  
    암호화 과정을 직접 구현해서 보거나 하는둥 다양한 시도를 했었다.  
-3. *답안 코드  
+3. **답안 코드**    
    그렇게 해서 나온 결과값이  
 ```
 table = [ 0x7E , 0x7D , 0x9A , 0x8B , 0x25 , 0x2D , 0xD5 , 0x3D ,
