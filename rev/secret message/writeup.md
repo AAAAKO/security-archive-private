@@ -1,11 +1,11 @@
 # [secret message]  
 
 ## 🔍 문제 설명 / Problem Description
-- 문제 출처 / Source: https://dreamhack.io/wargame/challenges/235
-- 요약 / Summary:
+- 문제 출처 / Source: https://dreamhack.io/wargame/challenges/235  
+- 요약 / Summary:  
   - 이미지 인코딩 로직을 역연산 하여 .raw를 복원하는 문제입니다.  
 
-## 🛠 사용 도구 및 환경 / Tools & Environment
+## 🛠 사용 도구 및 환경 / Tools & Environment  
 - 사용한 도구 / Tools used: IDA Free 9.1  
 - 분석 환경 / Analysis environment: MS Windows 10  
 - 실행 포맷 / Executable format: ELF64 for x86-64 (Shared Object)  
@@ -23,16 +23,16 @@
 
    .raw 에서 한 문자를 읽고 .enc 에 한 문자를 쓰는게 평범한 형태 인것으로 보이나  
 
-   내부 루프가 하나가 더 있다. 이전에 읽은 문자를 기록하는 변수 v5 ,
+   내부 루프가 하나가 더 있다. 이전에 읽은 문자를 기록하는 변수 v5 ,  
    반복 횟수를 기록하는 v3 흐름을 알아보기 위해 수기로 흐름을 작성했다.  
 
-![흐름 분석 / Flow Analysis](img/flow.jpg)
+![흐름 분석 / Flow Analysis](img/flow.jpg)   
    같은 문자가 2번이상 반복할 경우 추가 반복되는 문자의 수를 기록하는 형태였다.  
 
 
 ## 🧠 어셈블리 분석 / Assembly Analysis  
 1. **Main**     
-![어셈블리 / Assembly](img/assembly_analysis_main.jpg)
+![어셈블리 / Assembly](img/assembly_analysis_main.jpg)  
 
 2. **sub_7FA**    
    (1)  
@@ -46,7 +46,7 @@
 
 ## 🔓 풀이 과정 / Solution Steps  
 1. **입력값 추론**      
-   X
+   X  
 2. **실패 이유**  
    X  
 3. **답안 코드**    
@@ -86,9 +86,9 @@ if __name__ == '__main__':
 
 ## ✅ 결과 / Result
 -  
-```
-python imageviewer.py secretMessage.raw
-```
+```  
+python imageviewer.py secretMessage.raw  
+```  
    주어진 이미지 뷰어를 통해 이미지를 열어준다면 플래그를 획득할 수 있다.  
 
 ## 📝 기타 메모 / Notes
